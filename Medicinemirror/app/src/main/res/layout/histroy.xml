@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/huibai"
+              android:layout_weight="9"
+              android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:background="@color/green"
+                android:gravity="right"
+                android:layout_height="50dp">
+            <TextView android:layout_width="wrap_content"
+                      android:gravity="center"
+                      android:layout_marginTop="6dp"
+                      android:textColor="@color/white"
+                      android:textSize="26dp"
+                      android:text="识别历史"
+                      android:layout_weight="1"
+                      android:layout_height="wrap_content"/>
+            <ImageButton
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="5sp"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop"
+                    android:background="#00000000"
+                    android:src="@drawable/deletewhite"
+                    android:id="@+id/deleteall"/>
+        </LinearLayout>
+        <ListView
+                android:layout_width="match_parent"
+                android:id="@+id/historylist"
+                android:layout_height="wrap_content"/>
+
+    <!--         android:dividerHeight="2sp"       android:divider="@color/hui"-->
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent"
+                  android:background="#03A9F4"
+                  android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent"
+                  android:layout_margin="15sp"
+                  android:layout_height="wrap_content">
+            <TextView
+                android:text="欢迎注册！"
+                android:textColor="#CDDC39"
+                android:textSize="24sp"
+                android:layout_width="wrap_content"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" android:id="@+id/textView10" />
+            <ImageView
+                android:layout_width="23sp"
+                android:layout_height="23sp"
+                android:layout_gravity="center"
+                android:src="@drawable/apppicture"
+                android:id="@+id/imageView2"/>
+            <TextView
+                android:text="@string/app_name"
+                android:textSize="23sp"
+                android:textColor="#CDDC39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView11"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
+            android:layout_height="wrap_content">
+
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView
+                    android:text="账&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;号："
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" android:id="@+id/textView"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入账号"
+                    android:id="@+id/account"/>
+        </TableRow>
+<!--        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">-->
+<!--            <TextView-->
+<!--                    android:text="用&#8194;&#8194;&#8194;户&#8194;&#8194;&#8194;名："-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:layout_height="wrap_content" android:id="@+id/textView2"/>-->
+<!--            <EditText-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:hint="请输入昵称"-->
+<!--                    android:id="@+id/username"/>-->
+<!--        </TableRow>-->
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView
+                    android:text="性&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;别："
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content" android:id="@+id/textView3"/>
+            <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/sex"
+                    android:layout_height="wrap_content">
+                <RadioButton
+                        android:text="男"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:checked="true"
+                        android:layout_height="wrap_content" android:id="@+id/man"/>
+                <RadioButton
+                        android:text="女"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/woman"/>
+            </RadioGroup>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView
+                    android:text="联&#8194;系&#8194;电&#8194;&#8194;话："
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" android:id="@+id/textView6"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入电话"
+                    android:id="@+id/tel"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="住&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;址："
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" android:id="@+id/textView7"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入住址"
+                    android:id="@+id/adress"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="密&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;&#8194;码："
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" android:id="@+id/textView8"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="请输入密码"
+                    android:id="@+id/passwad"/>
+        </TableRow>
+        <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="再次确认密码："
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" android:id="@+id/textView9"/>
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="请再次输入密码"
+                    android:id="@+id/passwadagain"/>
+        </TableRow>
+    </TableLayout>
+    <Button
+            android:text="注册"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40sp"
+            android:background="@drawable/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/register"/>
+
+
+</LinearLayout>

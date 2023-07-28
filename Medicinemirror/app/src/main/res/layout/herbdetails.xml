@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_weight="9"
+              android:layout_height="wrap_content">
+    <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:background="@color/green"
+                android:gravity="right"
+                android:layout_height="50dp">
+        <com.example.medicinemirror.Customize.Zdyblack
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"/>
+        <TextView android:layout_width="wrap_content"
+                      android:gravity="center"
+                      android:layout_marginTop="6dp"
+                      android:textColor="@color/white"
+                      android:textSize="26dp"
+                      android:text="中草药详情"
+                      android:layout_weight="1"
+                      android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:layout_height="wrap_content">
+            <HorizontalScrollView android:layout_width="match_parent"
+                                  android:layout_margin="20sp"
+                                  android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="match_parent"
+                              android:orientation="horizontal"
+                              android:layout_gravity="center"
+                              android:layout_height="wrap_content">
+                    <ImageView android:layout_width="300sp"
+                               android:src="@drawable/root"
+                               android:scaleType="centerCrop"
+                               android:id="@+id/herbdetailspicture"
+                               android:layout_height="200sp"/>
+<!--                    <ImageView android:layout_width="300sp"-->
+<!--                               android:layout_marginLeft="20sp"-->
+<!--                               android:src="@drawable/root"-->
+<!--                               android:layout_height="200sp"/>-->
+                </LinearLayout>
+            </HorizontalScrollView>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_marginLeft="20sp"
+                          android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content"
+                          android:textColor="@color/green"
+                          android:text="药名"
+                          android:id="@+id/herbdetailsname"
+                          android:textSize="30sp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"/>
+                <ImageButton android:layout_width="40sp"
+                             android:background="#00000000"
+                             android:id="@+id/herbdetailscollect"
+                             android:scaleType="centerCrop"
+                             android:layout_marginRight="20sp"
+                             android:src="@drawable/collectbefore"
+                             android:layout_height="40sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_margin="20sp"
+                          android:layout_height="wrap_content">
+                <TextView android:layout_width="match_parent"
+                          android:text="药材内容详情"
+                          android:textColor="@color/black"
+                          android:id="@+id/herbdetailscontent"
+                          android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

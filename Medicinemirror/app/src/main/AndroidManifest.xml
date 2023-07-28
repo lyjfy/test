@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.medicinemirror">
+    <!--    相册权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--    联网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission><!--改变无线网状态-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission><!--访问无线网状态-->
+    <!--相机权限-->
+<!--    <uses-permission android:name="android.permission.CAMERA" />有冲突跟照相调用-->
+    <!--读文件权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--使用特性-->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!--震动权限-->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/apppicture"
+            android:label="@string/app_name"
+            android:roundIcon="@drawable/apppicture"
+            android:supportsRtl="true"
+            android:networkSecurityConfig="@xml/network_security_config"
+            android:theme="@style/Theme.MedicineMirror">
+<!--        注册内容提供器-->
+        <provider
+                android:authorities="com.example.medicinemirror"
+                android:name="androidx.core.content.FileProvider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_paths"/>
+        </provider>
+
+        <activity android:name=".MainActivity" android:exported="true">
+<!--        <activity android:name=".Activity.FragmentActivity">-->
+<!--        <activity android:name=".Activity.BaidushibieActivity">-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.FragmentActivity"></activity>
+        <activity android:name=".Activity.RegisterActivity"></activity>
+        <activity android:name=".Activity.AboutourActivity"></activity>
+        <activity android:name=".Activity.PeoplenewsActivity"></activity>
+        <activity android:name=".Activity.CollectActivity"></activity>
+        <activity android:name=".Activity.CeshiActivity"></activity>
+        <activity android:name=".Activity.CommonActivity"></activity>
+        <activity android:name=".Activity.SearchActivity"></activity>
+        <activity android:name=".Activity.HerbdetailsActivity"></activity>
+        <activity android:name=".Activity.BaidushibieActivity"></activity>
+
+
+    </application>
+
+</manifest>
